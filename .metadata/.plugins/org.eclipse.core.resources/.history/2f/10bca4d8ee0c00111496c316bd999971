@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Ref App</title>
+	<script type="text/javascript" charset="utf-8" src="ref_app.js"></script>
+	<link rel="stylesheet" href="master.css" type="text/css" media="screen" 
+		  title="master" >  
+<!-- 	<style type="text/css"> -->
+
+	
+<!-- 	</style> -->
+</head>
+
+
+<body>
+	
+	<div class="pitchButtons">
+		<input type="button" id="strikeButton" value="Strike"/>
+		<input type="button" id="foulButton" value="Foul"/>
+		<input type="button" id="ballButton" value="Ball"/>
+	</div>
+	<div class="runnerButtons" >
+		<input type="button" type="button" id="runnerSafeButton" value="Safe" />
+		<input type="button" id="runnerOutButton" value="Out"/>
+	</div>
+	<div>
+		<h1 class="statLabel" >Balls: </h1>
+		<h1 class="statCount" id="ballsCount">0</h1>
+		<h1 class="statLabel">Strikes: </h1>
+		<h1 class="statCount" id="strikesCount">0</h1>
+		<h1 class="statLabel">Fouls: </h1>
+		<h1 class="statCount" id="foulsCount">0</h1>
+		<h1 class="statLabel">Outs: </h1>
+		<h1 class="statCount" id="outsCount">0</h1>
+	</div>        
+</body>
+
+</html>

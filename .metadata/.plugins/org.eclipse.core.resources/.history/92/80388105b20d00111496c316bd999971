@@ -1,0 +1,78 @@
+@CHARSET "UTF-8";
+
+body{
+	background-color: #51ADAC;
+}
+div{
+
+   -webkit-border-radius: 8px;
+   -moz-border-radius: 8px;
+   border-radius: 8px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   height:200px;
+   width: 200px;
+   color: white;
+   text-decoration: none;
+   padding: 25px;
+}	
+
+div.safeButton {
+   background: #78d665;
+   background: -webkit-linear-gradient(top, #3e9c49, #78d665);
+   background: -moz-linear-gradient(top, #3e9c49, #78d665);
+   background: -ms-linear-gradient(top, #3e9c49, #78d665);
+   background: -o-linear-gradient(top, #3e9c49, #78d665);
+   width: 200px;
+   }
+div.safeButton:hover {
+   background: #28597a;
+   color: #ccc;
+   }
+div.safeButton:active {
+   border-top-color: #1b435e;
+   background: #1b435e;
+   }
+   
+div.outButton {
+   background: #b82b2b;
+   background: -webkit-linear-gradient(top, #eb1237, #b82b2b);
+   background: -moz-linear-gradient(top, #eb1237, #b82b2b);
+   background: -ms-linear-gradient(top, #eb1237, #b82b2b);
+   background: -o-linear-gradient(top, #eb1237, #b82b2b);
+   width: 200px;
+}
+div.outButton:hover {
+   background: #c21359;
+   color: #cccccc;
+}
+div.outButton:active {
+   background: #850505;
+}
+   
+   
+div.pitchButton {
+   background: #482cb8;
+   background: -webkit-linear-gradient(top, #5e12eb, #482cb8);
+   background: -moz-linear-gradient(top, #5e12eb, #482cb8);
+   background: -ms-linear-gradient(top, #5e12eb, #482cb8);
+   background: -o-linear-gradient(top, #5e12eb, #482cb8);
+}
+div.pitchButton:hover {
+   border-top-color: #1376c2;
+   background: #1376c2;
+   color: #cccccc;
+}
+div.pitchButton:active {
+   border-top-color: #090585;
+   background: #090585;
+}
+   
+	
+h1.statLabel{
+	padding-right:5px;
+}
+
+h1.statCount{
+}
+	 	

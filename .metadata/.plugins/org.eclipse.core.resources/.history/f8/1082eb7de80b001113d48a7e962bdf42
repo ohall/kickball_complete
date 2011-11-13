@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>PhoneGap</title>
+	<script type="text/javascript" charset="utf-8" src="ref_app.js"></script>
+</head>
+
+
+<body>
+	
+	<div>
+		<button id="strikeButt" value="Strike"/>
+		<button id="foulButt" value="Foul"/>
+		<button id="ballButt" value="Ball"/>
+	</div>
+	<div >
+		<button id="runnerSafeButt" value="Safe" />
+		<button id="runnerOutButt" value="Safe"/>
+	</div>
+	
+        
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+window.onload = init;
+
+var balls;
+var strikes;
+var fouls;
+var outs;
+
+var strikeButton;
+var foulButton;
+var ballButton;
+var runnerSafeButton;
+var runnerOutButton;
+
+function init(){
+    var addButton = document.getElementById("addButton");
+    addButton.onclick = hbclick;    
+    
+    
+    var strikeButton = document.getElementById("strikeButton");
+    strikeButton.onclick = strikeButtonClick;
+    
+    var foulButton = document.getElementById("foulButton");
+    foulButton.onclick = foulButtonClick;
+    
+    var ballButton = document.getElementById("ballButton");
+    ballButton.onclick = ballButtonClick;
+    
+    var runnerSafeButton = document.getElementById("runnerSafeButton");
+    runnerSafeButton.onclick = runnerSafeButtonClick;
+    
+    var runnerOutButton = document.getElementById("runnerOutButton");
+    runnerOutButton.onclick = runnerOutButtonClick;
+    
+}
+
+function strikeButtonClick() {
+}
+function foulButtonClick() {
+}
+function ballButtonClick() {
+}
+function runnerSafeButtonClick() {
+}
+function runnerOutButtonClick() {
+}
+
+function setCount() {
+	
+}
+
+
+
+
+
+
+
+function hbclick() {
+
+    var textinput = document.getElementById("inputText");
+    var itemname = textinput.value;
+    
+    var listItem = document.createElement("li");
+    listItem.innerHTML = itemname;
+    
+    var list = document.getElementById("list");
+    list.appendChild(listItem);
+    
+    
+}

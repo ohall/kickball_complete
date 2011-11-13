@@ -1,0 +1,107 @@
+@CHARSET "UTF-8";
+
+body{
+	background-color: #51ADAC;
+}
+input.safeButton {
+   border-top: 1px solid #78d66578d665;
+   background: #78d665;
+   background: -webkit-gradient(linear, left top, left bottom, from(#3e9c49), to(#78d665));
+   background: -webkit-linear-gradient(top, #3e9c49, #78d665);
+   background: -moz-linear-gradient(top, #3e9c49, #78d665);
+   background: -ms-linear-gradient(top, #3e9c49, #78d665);
+   background: -o-linear-gradient(top, #3e9c49, #78d665);
+   padding: 9.5px 19px;
+   -webkit-border-radius: 8px;
+   -moz-border-radius: 8px;
+   border-radius: 8px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: white;
+   font-size: 15px;
+   font-family: Georgia, serif;
+   text-decoration: none;
+   vertical-align: middle;
+   display: block;
+   width: 85px;
+   height: 85px;
+   
+   }
+input.safeButton:hover {
+   border-top-color: #28597a;
+   background: #28597a;
+   color: #ccc;
+   }
+input.safeButton:active {
+   border-top-color: #1b435e;
+   background: #1b435e;
+   }
+   
+input.outButton {
+   border-top: 1px solid #000000;
+   background: #b82b2b;
+   background: -webkit-gradient(linear, left top, left bottom, from(#eb1237), to(#b82b2b));
+   background: -webkit-linear-gradient(top, #eb1237, #b82b2b);
+   background: -moz-linear-gradient(top, #eb1237, #b82b2b);
+   background: -ms-linear-gradient(top, #eb1237, #b82b2b);
+   background: -o-linear-gradient(top, #eb1237, #b82b2b);
+   padding: 9.5px 19px;
+   -webkit-border-radius: 8px;
+   -moz-border-radius: 8px;
+   border-radius: 8px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: white;
+   font-size: 15px;
+   font-family: Georgia, serif;
+   text-decoration: none;
+   vertical-align: middle;
+   width: 85px;
+   height: 85px;
+   }
+input.outButton:hover {
+   border-top-color: #c21359;
+   background: #c21359;
+   color: #cccccc;
+   }
+input.outButton:active {
+   border-top-color: #850505;
+   background: #850505;
+   }
+   
+   
+   
+   
+   
+   
+
+div.pitchbuttons{
+	float: right;
+}   
+
+
+/* count for inning */
+
+div.currentCountBox{
+	border:solid;
+	float: left;
+}
+
+div.statBox{
+	display: block;
+	padding:10px;
+
+}
+h1.statLabel{
+	padding-right:5px;
+	float: left;
+}
+
+h1.statCount{
+	float: left;
+}
+	 	

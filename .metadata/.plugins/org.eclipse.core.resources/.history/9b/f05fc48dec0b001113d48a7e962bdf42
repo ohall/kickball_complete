@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>PhoneGap</title>
+	<script type="text/javascript" charset="utf-8" src="ref_app.js"></script>
+</head>
+
+
+<body>
+	
+	<div>
+		<input type="button" id="strikeButt" value="Strike"/>
+		<input type="button" id="foulButt" value="Foul"/>
+		<input type="button" id="ballButt" value="Ball"/>
+	</div>
+	<div >
+		<input type="button" id="runnerSafeButt" value="Safe" />
+		<input type="button" id="runnerOutButt" value="Safe"/>
+	</div>
+	<div>
+		<h2>Balls: </h1><h1 id="ballsCount"/>
+	</div>
+	<div>
+		<h2>Strikes: </h1><h1 id="strikesCount"/>
+	</div>
+	<div>
+		<h2>Fouls: </h1><h1 id="foulsCount"/>
+	</div>
+	<div>
+		<h2>Outs: </h1><h1 id="outsCount"/>
+	</div>
+	
+        
+</body>
+
+</html>
