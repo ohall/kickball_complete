@@ -35,7 +35,7 @@ function init(){
 	runnerOutButton.onclick = runnerOutButtonClick;
 	awayScoreButton.onclick = awayScoreButtonClick;
 	homeScoreButton.onclick = homeScoreButtonClick;
-	modalClose.onclick = hideModal('modalPage');
+//	modalClose.onclick = hideModal('modalPage');
 	
 }
 
