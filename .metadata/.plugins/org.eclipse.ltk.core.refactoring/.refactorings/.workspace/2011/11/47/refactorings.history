@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Delete 8 resources" deleteContents="false" description="Delete 8 resources" element1="/Ref_App/assets/www/akmodal_test.htm" element2="/Ref_App/assets/www/akModal.js" element3="/Ref_App/assets/www/cross.png" element4="/Ref_App/assets/www/dimensions.js" element5="/Ref_App/assets/www/dimmer.js" element6="/Ref_App/assets/www/interface.js" element7="/Ref_App/assets/www/jquery.js" element8="/Ref_App/assets/www/test.htm" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="8" stamp="1321164840396"/>
-</session>

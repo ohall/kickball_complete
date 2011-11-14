@@ -2,12 +2,19 @@
 
 body{
 	background-color: #51ADAC;
+	background-image:url("../art/grass.png");
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
 }
 
-table{
-	width: 100%;
-	height: 80%;
-	background-color: #FFD348;
+table.mainTable{
+
+	width:100%;
+	top:0px;
+	bottom: 25px;
+	position: block;
 	border-width: 0;	
 }
 div{
@@ -76,11 +83,11 @@ div.undoButton {
    left:  0;
 }
 	
-h1.statLabel{
+h2.statLabel{
 	padding-right:5px;
 }
 
-h1.statCount{
+h2.statCount{
 }
 	 	
 
@@ -89,11 +96,20 @@ h1.statCount{
 	 	
 #modalPage
 {
+	-webkit-border-radius: 0;
+   	-moz-border-radius: 0;
+  	 border-radius: 0;
+   	-webkit-box-shadow: none;
+   	-moz-box-shadow:none;
+   	color: white;
+   	padding: 5px;
+   	border: none;
     display: none;
     position: absolute;
     width: 100%;
     height: 100%;
-    top: 0px; left: 0px;
+    top: 0px; 
+    left: 0px;
 }
 div.modalBackground
 {
@@ -103,38 +119,21 @@ div.modalBackground
     z-index: 500;
     top: 0px; left: 0px;
 }
-div.modalContainer
+table.modalContainer
 {
     position: absolute;
     width: 300px;
-    left: 50%;
-    top: 50%;
+    left: 0px;
+    right: 0px;
+    top: 25%;
     z-index: 750;
-}
-div.modal
-{
     background-color: white;
-    border: solid 4px black; position: relative;
-    top: -150px;
-    left: -150px;
-    z-index: 1000;
-    width: 300px;
+    border: solid 4px black; 
+    position: relative;
     height: 300px;
     padding: 0px;
 }
-div.modalTop
-{
-    width: 292px;
-    background-color: #000099;
-    padding: 4px;
-    color: #ffffff;
-    text-align: right;
+
+h3.teamInput{
+	color: black;	
 }
-div.modalTop a, div.modalTop a:visited
-{
-    color: #ffffff;
-}
-div.modalBody
-{
-    padding: 10px;
-}	 	

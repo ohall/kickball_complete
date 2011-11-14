@@ -24,7 +24,7 @@ function init(){
 		homeScoreButton = document.getElementById("homeScoreButton"),
 		awayTeamNameLabel = document.getElementById("awayTeamNameLabel"),
 		homeTeamNameLabel = document.getElementById("homeTeamNameLabel"),
-		modalClose = document.getElementById("modalClose");
+		modalDoneButton = document.getElementById("modalDoneButton");
 	
 	awayTeamNameLabel.innerHTML = awayTeam;
 	homeTeamNameLabel.innerHTML = homeTeam;
@@ -35,39 +35,43 @@ function init(){
 	runnerOutButton.onclick = runnerOutButtonClick;
 	awayScoreButton.onclick = awayScoreButtonClick;
 	homeScoreButton.onclick = homeScoreButtonClick;
-//	modalClose.onclick = hideModal('modalPage');
+	modalDoneButton.onclick = saveTeamsandHideModal;
+
+	revealModal('modalPage');
 	
 }
 
+
 function awayScoreButtonClick(){
-	awayScore++;
-	setDisplayedNums();
+	awayScore++;	
+	setDisplayedVals();
+;
 }
 
 function homeScoreButtonClick(){
-	homeScore++;
-	setDisplayedNums();
+	homeScore++;	
+	setDisplayedVals();
 }
 
 function strikeButtonClick() {
-	strikes++;
-	setDisplayedNums();
+	strikes++;	
+	setDisplayedVals();
 	checkIfOut();
 }
 function foulButtonClick() {
-	fouls++;
-	setDisplayedNums();
+	fouls++;	
+	setDisplayedVals();
 	checkIfOut();
 }
 function ballButtonClick() {
 	balls++;
 	checkIfOut();
-	setDisplayedNums();
+	setDisplayedVals();
 	
 }
 function runnerSafeButtonClick() {
 	resetCount();
-	setDisplayedNums();
+	setDisplayedVals();
 }
 function runnerOutButtonClick() {
 	kickerOut();
@@ -93,7 +97,7 @@ function inningOver(){
 	newInningCount();
 }
 
-function setDisplayedNums() {
+function setDisplayedVals() {
 	var ballDisplay = document.getElementById("ballsCount"),
 		strikeDisplay = document.getElementById("strikesCount"),
 		foulsDisplay = document.getElementById("foulsCount"),
@@ -101,6 +105,9 @@ function setDisplayedNums() {
 		inningMarker = document.getElementById("inningMarker"),
 		awayScoreLabel = document.getElementById("awayTeamScore"),
 		homeScoreLabel = document.getElementById("homeTeamScore");
+	
+	homeTeamNameLabel.innerHTML = homeTeam;
+	awayTeamNameLabel.innerHTML = awayTeam;
 	awayScoreLabel.innerHTML = awayScore;
 	homeScoreLabel.innerHTML = homeScore;
 	ballDisplay.innerHTML = balls;
@@ -114,7 +121,7 @@ function resetCount() {
 	balls = 0;
 	strikes = 0;
 	fouls = 0;
-	setDisplayedNums();
+	setDisplayedVals();
 }
 
 function newInningCount() {
@@ -126,7 +133,7 @@ function newInningCount() {
 		halfInning = "Top"
 		inning++;
 	}
-	setDisplayedNums();
+	setDisplayedVals();
 }
 
 
@@ -137,8 +144,12 @@ function revealModal(divID)
     document.getElementById(divID).style.top = document.body.scrollTop;
 }
 
-function hideModal(divID)
+function saveTeamsandHideModal()
 {
-	alert("modal");
-    document.getElementById(divID).style.display = "none";
+    awayTeam = document.getElementById("awayTeamInput").value;
+    homeTeam = document.getElementById("homeTeamInput").value;
+    
+    var modal = document.getElementById("modalPage");
+    modal.style.display = "none";   
+    setDisplayedVals();
 }

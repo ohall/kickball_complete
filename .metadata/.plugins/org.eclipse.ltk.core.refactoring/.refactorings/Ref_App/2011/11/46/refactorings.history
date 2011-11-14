@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;Ref_App/assets/www/phonegap.js&apos; to &apos;ref_app.js&apos;" description="Rename resource &apos;phonegap.js&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="assets/www/phonegap.js" name="ref_app.js" stamp="1320960511373" updateReferences="true"/>
-</session>
