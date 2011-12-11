@@ -1,0 +1,184 @@
+Basic ref-app API
+------------------
+
+Service:	/status
+Type:		GET
+Params:		sessionId
+Returns:	Already logged in:
+			{
+				"loggedIn": "true" // if logged in, false otherwise
+			}
+
+---------------
+
+Service:	/authenticate
+Type:		GET
+Params:		username : String
+			password : String
+Returns:	
+			Success:
+			{
+				"success": "true",
+				"roles": [ "ref" ], // or "admin", etc
+				"sessionId": "someId"
+			}
+
+			Failure:
+			{
+				"success": "false",
+				"reason":	"invalid credentials"
+			}
+			
+---------------------
+
+
+Service:	/ref/games
+Description:	Returns a list of current or upcoming games the ref may be officiating.
+Type:		GET
+Params:		None
+Returns:	{
+				"success": "true",
+				"games": [ { 	id: "game1id", 
+								team1: {
+									id: "team1id",
+									name: "Rangers"
+								}
+								team2: {
+									id: "team2id",
+									name: "Devils"
+								}
+								location: {
+									fieldId: "fieldId";
+									
+								}
+							}
+							....
+							]
+			}
+			
+			
+---------------------
+
+Service: 	/ref/team
+Description: Retrieves information about a team
+Type:		GET
+Params:		teamId : String
+Returns:	{
+				"success": "true",
+				"id": "teamId",
+				"name":	"teamName",
+				"contacts": [ 
+					{ 
+						"id":	"captain1id",
+						"name":	"captain name",
+						"phone":	"phone number", // optional
+						"email":	"email",		// optional
+					}, 
+					...
+				],
+				"hometown":	 {
+					"name": "town name",
+					"state":	"state name",
+					"country":	"country name"
+				}
+			}
+			
+			Invalid Team Id (or no permissions):
+			
+			{
+				"success": "false"
+				"reason":	"No such team"
+			}
+			
+
+---------------------
+
+Service:	/ref/game/start
+Description:	Starts a game
+Type:			PUT
+Param:			gameId : String
+				battingTeamId : String
+Returns:		{
+				"success": "true",
+				"timeLimit":	"60:00"
+				}
+				
+				or
+				
+				{
+					"success": "false",
+					"errorCode":	"100"
+					"message:	"Game already started"
+				}
+				
+				or
+				
+				{
+					"success": "false",
+					"errorCode":	"101"
+					"message:	"Game already finished"
+				}
+				
+---------------------
+
+Service:	/ref/game/update
+Description:	Updates a game
+Type:			POST
+Params:			
+
+				{
+					gameId : String,
+					team1: {
+						id: "team id",
+						"score": "value"
+					},
+					team2: {
+						id: "team id",
+						"score": "value"
+					}, 
+					"inning": "X",
+					"outs": "Y",
+				}
+					
+Returns:		{
+				"success": "true"
+				}
+				
+				
+---------------------
+
+Service:	/ref/game/end
+Description:	Ends a game normally.
+Type:			PUT
+Param:			gameId : String				
+Returns:		{
+				"success": "true"
+				}
+				
+				or
+				
+				{
+					"success": "false",
+					"errorCode":	"200"
+					"message:	"Game already ended"
+				}
+				
+				or
+				
+				{
+					"success": "false",
+					"errorCode":	"201"
+					"message:	"Game not yet started"
+				}				
+
+
+---------------------
+Service:	/ref/game/cancel
+
+Description:	Ends a game abnormally.
+Type:			PUT
+Param:			gameId : String
+				reason : String values "Weather|Other"
+Returns:		{
+				"success": "true"
+				}
